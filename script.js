@@ -158,19 +158,20 @@ the student object anymore.
 // obj1.canWalk()
 
 // Now we convert above code to class function 
-
-function constructing(name,age) {
-    // properties
-    this.name = name;
-    this.age = age;
-    // method
-    this.canWalk = function(){ // here we are writing "this" keyword in method 
-        console.log(this.name+" can walk.")
+class Person {
+    constructor(name,age) {
+        // properties
+        this.name = name;
+        this.age = age;
     }
-}
+    // method
+    canWalk() {
+        console.log(this.name + " can walk.");
+    }
 
-const obj1 = new constructing("chaitu",30)
-const obj2 = new constructing("Adi",32)
-console.log(obj1)
-console.log(obj2)
-obj1.canWalk()
+}
+const person1 = new Person("chaitu",30)
+const person2 = new Person("Adi",32)
+console.log(person1)
+console.log(person1)
+person1.canWalk()
